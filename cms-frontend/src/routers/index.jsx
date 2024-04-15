@@ -12,6 +12,12 @@ const baseUrl = "https://phase2-aio.vercel.app";
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    loader: () => {
+      return redirect("/products");
+    },
+  },
+  {
     path: "/login",
     element: <LoginPage baseUrl={baseUrl} />,
   },
